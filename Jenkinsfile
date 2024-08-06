@@ -18,7 +18,7 @@ sh 'mvn clean package'
 stage("sonar quality check"){
 steps{
 script{
-withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'jenkins-sonar-token') {
+withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'sonarqube') {
 sh 'mvn sonar:sonar '
 }
  
